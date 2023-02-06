@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Latam - ICAO Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      span {
+        display: block;
+        position: absolute;
+        background: #2B2D42;
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+        animation: animate 1s linear infinite;
+      }
+      @keyframes animate{
+        0%{
+            width: 0px;
+            height: 0px;
+        }
+        100%{
+            width: 50px;
+            height: 50px;
+        }
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        background-position: center;
+        transition: background 0.8s;
+        width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px;
+        border: none;
+        border-bottom: 2px solid #2B2D42;
+        background-color: transparent;
+        color: #2B2D42;
+        transition: box-shadow 0.3s ease-in-out;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px #2B2D42;
+      }
+      input[type="text"]:hover {
+        box-shadow: 0 0 10px #2B2D42;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="perguntaGerada">CGR</h1>
+    <input id="respostaUser" type="text" placeholder="Digite sua resposta">
+    <p id="reactionTime"></p>
+    <script src="Treinar2.js"></script>
+  </body>
+</html>
